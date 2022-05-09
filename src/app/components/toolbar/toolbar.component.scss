@@ -1,0 +1,25 @@
+@import '../../../styles';
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $white;
+
+  .logo {
+    display: flex;
+    height: inherit;
+  }
+
+  .menu {
+    width: 200px;
+
+    button {
+      width: 100px;
+    }
+  }
+
+  .selectedPage{
+    background-color: rgb(0, 123, 255);
+    border-radius: 5px;
+  }
+}

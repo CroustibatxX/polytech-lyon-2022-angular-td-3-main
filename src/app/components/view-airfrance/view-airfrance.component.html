@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="title"><h1>DECOLLAGES</h1></div>
+  <div class="sections">
+    <div class="left">
+      <div class="top">
+        <app-filtres (filtresEvent)="onFiltresEvent($event)"></app-filtres>
+      </div>
+      <div class="bottom">
+        <div *ngIf="displayLoader; else elseBlock" class="loader"><mat-spinner [diameter]="70"></mat-spinner></div>
+        <ng-template #elseBlock> 
+          <app-liste-vols [listeVols]="vols" (displayPassenger)="displayPassenger($event)"></app-liste-vols>
+        </ng-template>
+      </div>
+    </div>
+    <div class="right">
+      <app-liste-passagers [passengers]="passengers"></app-liste-passagers>
+    </div>
+  </div>
+</div>

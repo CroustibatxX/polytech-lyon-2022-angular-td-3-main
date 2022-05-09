@@ -1,0 +1,13 @@
+.volRow{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 1px;
+    padding: 2px;
+    align-items: center;
+}
+
+.volRow:hover{
+    background-color: rgb(194, 194, 194);
+}

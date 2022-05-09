@@ -1,0 +1,21 @@
+<!-- Affichage d'un vol -->
+<div><mat-icon>flight_takeoff</mat-icon></div>
+<div>{{vol?.icao}}</div>
+<div>{{vol?.matricule}}</div>
+<div class="destination">
+    <div>
+        <div *ngIf="vol?.aeroportDepart !== null; else elseBlock">{{vol?.aeroportDepart}}</div>
+        <ng-template #elseBlock>Inconnu</ng-template>
+    </div>
+    <div>
+        <mat-icon>arrow_right_alt</mat-icon>
+    </div>
+    <div>
+        <div *ngIf="vol?.aeroportArrivee !== null; else elseBlock">{{vol?.aeroportArrivee}}</div>
+        <ng-template #elseBlock>Inconnu</ng-template>
+    </div>
+</div>
+<div>
+    <img class="volImg" src="/assets/{{vol?.compagnie}}.png" alt="Image du nom de la compagnie">
+</div>
+

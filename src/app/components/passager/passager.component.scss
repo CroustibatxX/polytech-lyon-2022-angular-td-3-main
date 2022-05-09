@@ -1,0 +1,14 @@
+.passengerImg{
+    width: 50px;
+}
+
+.bagageDiv{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.passengerBluring{
+    filter: blur(4px)
+}

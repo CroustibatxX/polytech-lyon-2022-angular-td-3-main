@@ -1,0 +1,4 @@
+<!-- Affichage de la liste des vols -->
+<div style="margin-right:10px;">
+    <app-vol class="volRow" *ngFor="let vol of listeVols" (click)="selectVol(vol)" [vol]="vol"></app-vol>
+</div>

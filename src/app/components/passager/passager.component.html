@@ -1,0 +1,10 @@
+<!-- Affichage d'un passager -->
+<img class="passengerImg" [ngClass]="displayThumb ? '' : 'passengerBluring'" src="{{passenger?.image}}">
+<div>{{passenger?.nom}}</div>
+<div [appClasseVol]="passenger?.classeVol">{{passenger?.classeVol}}</div>
+<div class="bagageDiv" [appBagageVol]="passenger">
+    <mat-icon>work</mat-icon>
+    <div>
+        x{{passenger?.nbBagagesSoute}}
+    </div>
+</div>

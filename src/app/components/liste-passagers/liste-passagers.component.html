@@ -1,0 +1,5 @@
+<!-- Affichage de la liste des passagers -->
+<mat-slide-toggle [checked]="displayThumb" *ngIf="passengers && passengers.length > 0" (change)="onValChange($event)" class="blurThumbToggle">Afficher les photos des passagers</mat-slide-toggle>
+<div>
+    <app-passager class="passengerRow" [displayThumb]="displayThumb" *ngFor="let passenger of passengers" [matTooltip]="passenger.email" [passenger]="passenger"></app-passager>
+</div>
